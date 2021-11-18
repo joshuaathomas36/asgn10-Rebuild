@@ -28,21 +28,23 @@
   // Load class definitions manually
 
   //  We can call the classes individually
-  // require_once('classes/DatabaseObject.class.php');
-  // require_once('classes/Bird.class.php');
+  require_once('classes/DatabaseObject.class.php');
+  require_once('classes/Bird.class.php');
+  require_once('classes/member.class.php');
+  require_once('classes/session.class.php');
 
   // Or use a loop 
-  foreach(glob('classes/*.class.php') as $file) {
-    require_once($file);
-  }
+  // foreach(glob('classes/*.class.php') as $file) {
+  //   require_once($file);
+  // }
 
   // Autoload class definitions
-  function my_autoload($class) {
-    if(preg_match('/\A\w+\Z/', $class)) {
-      include('classes/' . $class . '.class.php');
-    }
-  }
-  spl_autoload_register('my_autoload');
+  // function my_autoload($class) {
+  //   if(preg_match('/\A\w+\Z/', $class)) {
+  //     include('classes/' . $class . '.class.php');
+  //   }
+  // }
+  // spl_autoload_register('my_autoload');
 
   $database = db_connect();
   DatabaseObject::set_database($database);

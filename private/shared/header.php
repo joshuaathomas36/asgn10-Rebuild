@@ -4,7 +4,7 @@
   <head>
     <title>WNC Birds <?php if(isset($page_title)) { echo '- ' . h($page_title); } ?></title>
     <meta charset="utf-8">
-    <link rel="stylesheet" media="all" href="<?= url_for('/stylesheets/public.css'); ?>" />
+    <!-- <link rel="stylesheet" media="all" href="<?= url_for('/stylesheets/public.css'); ?>" /> -->
   </head>
 
   <body>
